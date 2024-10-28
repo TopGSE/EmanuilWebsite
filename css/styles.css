@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.oswald-unique {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background: rgb(2, 0, 36);
+	/*background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(63, 9, 121, 0.9752275910364145) 9%, rgba(0, 232, 255, 1) 56%);*/
+	color: #fff;
+	padding-left: 8rem;
+	padding-right: 8rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+}
+
+header h1 {
+	font-weight: lighter;
+	font-style: italic;
+}
+
+header img {
+	width: 100px;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+main {
+	display: block;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	height: 90vh;
+	background-image: url(../images/image\ copy\ 3.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 20rem;
+}
+
+main button {
+	padding: 1rem 2rem;
+	background: #fff;
+	color: #000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 2rem;
+}
+
+main button:hover {
+	background: #000;
+	color: #fff;
+}
+
+main h1 {
+	font-size: 6rem;
+	font-weight: 300;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main p {
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+nav ul {
+	display: flex;
+	gap: 1rem;
+
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+
+}
+
+nav ul li a:hover {
+	border-bottom: blue 2px solid;
+}
+
+section {
+	padding-left: 15rem;
+	padding-right: 15rem;
+}
