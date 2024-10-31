@@ -135,6 +135,7 @@ img {
 	font-size: 50px;
 	font-weight: 700;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-style: italic;
 }
 
 .hero__content p {
@@ -191,13 +192,14 @@ img {
 	margin: 0 auto;
 	text-align: center;
 	font-family: "Raleway", sans-serif;
-	background: #6b7280;
+	background: #d8dbe0;
 }
 
 .section__title {
-	font-size: 36px;
+	font-size: 45px;
 	font-weight: 700;
-	color: #1f2937;
+	color: #fff;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	margin-bottom: 30px;
 }
 
@@ -228,9 +230,7 @@ img {
 	width: 100%;
 	height: auto;
 	border-radius: 8px;
-	/*margin-bottom: 15px;*/
 	aspect-ratio: 16/9;
-
 }
 
 .video__title {
