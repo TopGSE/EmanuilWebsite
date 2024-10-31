@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .oswald-unique {
 	font-family: "Oswald", sans-serif;
@@ -14,157 +15,233 @@
 	box-sizing: border-box;
 }
 
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 2rem;
-	background: rgb(2, 0, 36);
-	color: #fff;
-	padding-left: 8rem;
-	padding-right: 8rem;
-	position: fixed;
-	width: 100%;
-	z-index: 1000;
-
-}
-
-header h1 {
-	font-weight: lighter;
-	font-style: italic;
-}
-
-header img {
-	width: 100px;
-}
-
-body {
-	font-family: 'Raleway', sans-serif;
-}
-
-.main-home-page {
-	display: block;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	height: 90vh;
-	background-image: url(../images/image\ copy\ 3.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding-top: 20rem;
-}
-
-.main-emanuilkids-page {
-	display: block;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	height: 90vh;
-	background-image: url(../images/image\ copy\ 3.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding-top: 20rem;
-}
-
-main .typewriter h1 {
-	overflow: hidden;
-	border-right: .05em solid black;
-	white-space: nowrap;
-	margin: 0 auto;
-	letter-spacing: .15em;
-	width: 18ch;
-	animation:
-		typing 3.5s steps(40, end),
-		blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-	from {
-		width: 0
-	}
-
-	to {
-		width: 18ch;
-	}
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-
-	from,
-	to {
-		border-color: transparent
-	}
-
-	50% {
-		border-color: black;
-	}
-}
-
-main button {
-	padding: 1rem 2rem;
-	background: #fff;
-	color: #000;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-top: 2rem;
-}
-
-main button:hover {
-	background: #000;
-	color: #fff;
-}
-
-main h1 {
-	font-size: 6rem;
-	font-weight: 300;
-	color: #fff;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-main p {
-	font-size: 1.5rem;
-	color: #fff;
-}
-
-nav ul {
-	display: flex;
-	gap: 1rem;
-
-}
-
-nav ul li {
-	list-style: none;
-}
-
-nav ul li a {
+a {
 	text-decoration: none;
+	color: #1f2937;
+}
+
+img {
+	object-fit: cover;
+}
+
+.btn {
+	border: 2px solid #1f2937;
+	background: #1f2937;
 	color: #fff;
-
+	cursor: pointer;
+	border-radius: 10px;
+	transition: all 0.5s ease;
 }
 
-nav ul li a:hover {
-	border-bottom: blue 2px solid;
+.btn:hover {
+	color: #1f2937;
+	background: #fff;
+	border-color: #e5e7eb;
 }
 
-section {
-	padding-left: 15rem;
-	padding-right: 15rem;
+.btn--secondary {
+	color: #1f2937;
+	background: #fff;
+	border: 2px solid #e5e7eb;
 }
 
-footer {
-	background: rgb(2, 0, 36);
+.btn--secondary:hover {
 	color: #fff;
+	background: #1f2937;
+	border-color: #1f2937;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 60px;
+	border-bottom: 2px solid #e5e7eb;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.356);
+	font-family: "Raleway", sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	z-index: 1000;
+}
+
+.navbar__logo {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	gap: 10px;
+	font-style: italic;
+
+}
+
+.navbar__logo i {
+	font-size: 30px;
+}
+
+.navbar__menu {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.navbar__link {
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.5s ease;
+}
+
+.navbar__link:hover {
+	color: grey;
+}
+
+.navbar__actions {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.navbar__actions .btn {
+	padding: 6px 10px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.hero {
+	font-family: "Montserrat", sans-serif;
+	background-image: url(../assets/images/hero-image.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 95vh;
+	padding-top: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
-	padding: 3rem 0;
+	padding: 350px 0;
+	color: #e5e7eb;
 }
 
-@media screen and (max-width: 768px) {
-	header a img {
-		display: none;
-	}
+.hero__content h1 {
+	font-size: 50px;
+	font-weight: 700;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero__content p {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.hero__content .btn {
+	margin-top: 20px;
+}
+
+#btn-learnmore {
+	padding: 8px 12px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.hero__socials {
+	position: absolute;
+	top: 47%;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	transform: translateY(-50%);
+}
+
+.hero__socials .hero__social {
+	font-size: 24px;
+	color: #e5e7eb;
+	transition: color 0.5s ease;
+}
+
+.hero__socials a {
+	color: #e5e7eb;
+	border: 2px solid #e5e7eb;
+	padding: 10px;
+	border-radius: 8px;
+	transition: all 0.5s ease;
+}
+
+.hero__socials .hero__social:hover {
+	color: #fff;
+	border-color: #fff;
+	background-color: #1f2937;
+}
+
+/*Style the videos from the index.html page*/
+
+.our__videos {
+	padding: 50px 20px;
+	max-width: 2000px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	background: #6b7280;
+}
+
+.section__title {
+	font-size: 36px;
+	font-weight: 700;
+	color: #1f2937;
+	margin-bottom: 30px;
+}
+
+.videos__container {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.video__card {
+	background: #f9fafb;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 100%;
+	max-width: 350px;
+	text-align: left;
+	transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.video__card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video__card iframe {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	/*margin-bottom: 15px;*/
+	aspect-ratio: 16/9;
+
+}
+
+.video__title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #1f2937;
+	margin-bottom: 10px;
+}
+
+.video__text {
+	font-size: 14px;
+	color: #6b7280;
+	line-height: 1.6;
 }
