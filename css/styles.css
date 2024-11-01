@@ -97,6 +97,17 @@ img {
 	transition: color 0.5s ease;
 }
 
+.navbar__link:last-child {
+	border: 1px solid #1f2937;
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+
+.navbar__link:last-child:hover {
+	background: #1f2937;
+	color: #fff;
+}
+
 .navbar__link:hover {
 	color: #000;
 }
@@ -123,7 +134,7 @@ img {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 95vh;
+	height: 100vh;
 	padding-top: 80px;
 	display: flex;
 	align-items: center;
@@ -195,6 +206,47 @@ img {
 	background-color: #1f2937;
 }
 
+/*About Us Preview*/
+
+.about-us__preview {
+	padding: 50px 20px;
+	background: #f9fafb;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-us__preview img {
+	width: 500px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	object-position: left;
+	margin-left: 2rem;
+	transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.about-us__preview img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-us__content {
+	max-width: 500px;
+	margin-right: 2rem;
+	padding: 50px;
+}
+
+.about-us__content p {
+	font-size: 18px;
+	color: #1f2937;
+	margin-bottom: 20px;
+}
+
 /*Style the videos from the index.html page*/
 
 .our__videos {
@@ -209,7 +261,7 @@ img {
 .section__title {
 	font-size: 45px;
 	font-weight: 700;
-	color: #fff;
+	color: #d8d8d8;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	margin-bottom: 30px;
 }
@@ -265,6 +317,29 @@ img {
 	font-weight: 500;
 	border-radius: 6px;
 }
+
+/*Video keyframes animation*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.video__card {
+	opacity: 0;
+	animation: fadeIn 1s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+ù
+/*Footer Styling*/
 
 .footer-container {
 	background-color: #1f2937;
@@ -343,4 +418,59 @@ img {
 .footer__copy {
 	font-size: 14px;
 	margin-top: 10px;
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Social icon animation */
+@keyframes fadeInSocial {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hero__content {
+	opacity: 0;
+	animation: fadeIn 1s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+.hero__socials .hero__social {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInSocial 0.5s ease-out forwards;
+}
+
+.hero__socials .hero__social:nth-child(1) {
+	animation-delay: 1s;
+}
+
+.hero__socials .hero__social:nth-child(2) {
+	animation-delay: 1.3s;
+}
+
+.hero__socials .hero__social:nth-child(3) {
+	animation-delay: 1.6s;
 }
