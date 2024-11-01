@@ -15,6 +15,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 a {
 	text-decoration: none;
 	color: #1f2937;
@@ -89,14 +93,19 @@ img {
 .navbar__link {
 	font-size: 14px;
 	font-weight: 500;
-	transition: all 0.5s ease;
+	color: #000;
+	transition: color 0.5s ease;
 }
 
 .navbar__link:hover {
-	color: grey;
+	color: #000;
 }
 
-.navbar__actions {
+.navbar:hover .navbar__link:not(:hover) {
+	color: rgba(197, 197, 197, 0.788);
+}
+
+.navbar__link .navbar__actions {
 	display: flex;
 	align-items: center;
 	gap: 20px;
@@ -307,7 +316,7 @@ img {
 }
 
 .footer__link:hover {
-	color: #fbbf24;
+	color: #d8dbe0;
 }
 
 .footer__link:hover::after {
@@ -327,7 +336,7 @@ img {
 }
 
 .footer__social:hover {
-	color: #fbbf24;
+	color: #e5e7eb;
 	transform: scale(1.1);
 }
 
