@@ -16,19 +16,41 @@
 			<div class="navbar__menu">
 				<a href="index.html" class="navbar__link">Начало</a>
 				<a href="about.html" class="navbar__link">За нас</a>
-				<a href="#" class="navbar__link">Нашата църква</a>
-				<a href="#" class="navbar__link">Нашата история</a>
+				<a href="#our__videos" class="navbar__link">Нашата църква</a>
+				<a href="#" class="navbar__link">Тази седмица</a>
 				<a href="#" class="navbar__link">Връска с нас</a>
+				<a href="#" class="navbar__link">Още други</a>
+
+				<!-- Language Dropdown -->
+				<div class="dropdown">
+					<button class="dropdown__button">Language</button>
+					<div class="dropdown__content">
+						<a href="#" onclick="translatePage('bg')">Bulgarian</a>
+						<a href="#" onclick="translatePage('en')">English</a>
+						<a href="#" onclick="translatePage('nl')">Dutch</a>
+
+					</div>
+				</div>
 			</div>
 			<div class="navbar__actions">
 				<button class="btn" id="btn-learnmore">Научи повече</button>
 			</div>
 		</nav>
 
+		<section class="hero__about" id="about">
+			<div class="hero__content">
+				<h1 class="hero__title">За нас</h1>
+				<p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt aliquam magnam explicabo! <br>Possimus id itaque repellat commodi similique, ab ipsam iure repudiandae ad asperiores?</p>
+				<button class="btn" id="btn-learnmore">Научи повече</button>
+			</div>
+		</section>
+
 		<footer class="footer-container">
 			<div class="footer__content">
 				<div class="footer__logo">
-					<a href="index.html"><img src="assets/images/website-logo-noback.png" class="footer__logo" alt=""></a>
+					<a href="index.html">
+						<img src="assets\images\website-logo-noback.png" class="footer__logo" alt="">
+					</a>
 				</div>
 				<div class="footer__menu">
 					<a href="index.html" class="footer__link">Начало</a>
@@ -53,5 +75,39 @@
 				<p>&copy; 2021 BEC Emanuil Gent. All rights reserved.</p>
 			</div>
 		</footer>
+
+		<div id="google_translate_element" style="display:none;"></div>
+
+		<!-- JavaScript -->
+		<script src="../js/script.js" defer></script>
+		<script type="text/javascript">
+			// Initialize Google Translate Element
+			function googleTranslateElementInit() {
+				new google
+					.translate
+					.TranslateElement({
+						pageLanguage: 'bg', // Bulgarian is the default language
+						includedLanguages: 'bg,en,fr,de,es,nl', // Available languages
+						autoDisplay: false
+					}, 'google_translate_element');
+			}
+		</script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<script type="text/javascript">
+			// Translate function with delay for Google Translate dropdown load
+			function translatePage(lang) {
+				function tryTranslate() {
+					const googleFrame = document.querySelector('.goog-te-combo');
+					if (googleFrame) {
+						googleFrame.value = lang;
+						googleFrame.dispatchEvent(new Event('change')); // Trigger Google Translate language change
+					} else {
+						setTimeout(tryTranslate, 500); // Retry if not loaded yet
+					}
+				}
+				tryTranslate();
+			}
+		</script>
 	</body>
 </html>
