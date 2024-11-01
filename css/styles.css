@@ -188,7 +188,7 @@ img {
 
 .hero__socials {
 	position: absolute;
-	top: 47%;
+	top: 20%;
 	right: 30px;
 	display: flex;
 	flex-direction: column;
@@ -258,6 +258,19 @@ img {
 	margin-bottom: 20px;
 }
 
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all 2s ease;
+}
+
+.reveal.active {
+	transform: translateY(0);
+	opacity: 1;
+	transition: transform 2s ease, opacity 0.5s ease;
+}
+
 /*Style the videos from the index.html page*/
 
 .our__videos {
@@ -282,6 +295,9 @@ img {
 	gap: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
+	/*animation: appear linear 0.5s;
+	animation-timeline: view();
+	animation-range: entry 0% cover 40%;*/
 }
 
 .video__card {
@@ -293,6 +309,7 @@ img {
 	max-width: 350px;
 	text-align: left;
 	transition: transform .3s ease, box-shadow .3s ease;
+
 }
 
 .video__card:hover {
@@ -573,13 +590,13 @@ img {
 
 .dropdown__button {
 	background-color: #333;
-	/* Background color */
 	color: white;
 	padding: 10px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
 	font-family: inherit;
+	border-radius: 6px;
 }
 
 .dropdown__content {
