@@ -19,6 +19,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+section {
+	font-family: "Raleway", sans-serif;
+}
+
 a {
 	text-decoration: none;
 	color: #1f2937;
@@ -114,7 +118,7 @@ img {
 }
 
 .navbar:hover .navbar__link:not(:hover) {
-	color: rgba(197, 197, 197, 0.788);
+	color: #9e9e9ec9;
 }
 
 .navbar__link .navbar__actions {
@@ -353,10 +357,12 @@ img {
 	color: #e5e7eb;
 	padding: 40px 20px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: space-evenly;
 	align-items: center;
 	text-align: center;
 	font-family: "Raleway", sans-serif;
+	flex-wrap: wrap;
 }
 
 .footer__content {
@@ -540,8 +546,12 @@ img {
 		padding-top: 60px;
 	}
 
-	.hero__content h1 {
-		font-size: 30px;
+	.hero__content {
+		padding: 200px 100px;
+	}
+
+	.hero__title {
+		font-size: 100px;
 	}
 
 	.hero__content p {
