@@ -11,13 +11,27 @@
 
 	<body>
 
+		<nav class="navbar__mobile">
+			<div class="mobile__nav__logo">
+				<a href="#home"><img src="assets/images/website-logo-noback.png" class="footer__logo" alt=""></a>
+			</div>
+			<button class="btn nav__button" onclick="openNav()">Menu</button>
+		</nav>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">Начало</a>
+			<a href="about.html">За нас</a>
+			<a href="#our__videos">Нашата църква</a>
+			<a href="#">Тази седмица</a>
+			<a href="#">Връска с нас</a>
+			<a href="#">Още други</a>
+		</div>
+
 		<nav class="navbar">
 			<a href="#home" class="navbar__logo">
 				<img src="assets/images/website-logo-noback.png" class="footer__logo" alt="">
 			</a>
-			<div class="hamburger__menu">
-				<i class="ri-menu-line"></i>
-			</div>
 			<div class="navbar__menu">
 				<a href="index.html" class="navbar__link">Начало</a>
 				<a href="about.html" class="navbar__link">За нас</a>
@@ -25,7 +39,6 @@
 				<a href="#" class="navbar__link">Тази седмица</a>
 				<a href="#" class="navbar__link">Връска с нас</a>
 				<a href="#" class="navbar__link">Още други</a>
-
 				<!-- Language Dropdown -->
 				<div class="dropdown">
 					<button class="dropdown__button">Language</button>
@@ -37,6 +50,8 @@
 					</div>
 				</div>
 			</div>
+			<button class="btn nav__button" onclick="openNav()">Menu</button>
+
 			<div class="navbar__actions">
 				<button class="btn" id="btn-learnmore">Научи повече</button>
 			</div>
